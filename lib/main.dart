@@ -1,3 +1,4 @@
+import 'package:cce/Pages/NEWSIGNIN.dart';
 import 'package:cce/Pages/home.dart';
 import 'package:cce/models/UserModels.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,9 @@ Future<void> main() async {
   print(email);
   userId = email;
   await Firebase.initializeApp();
-  runApp(MaterialApp(home: email == null ? RegisterPage() : HomeScreen()));
+  print(success);
+  print(email);
+  runApp(MaterialApp(home: NEWSIGNIN()));
 }
 
 //TODO check and remove redirection to container from here if possible
